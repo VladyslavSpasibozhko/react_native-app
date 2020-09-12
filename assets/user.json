@@ -1,0 +1,56 @@
+{
+  "gender": "male",
+  "name": {
+    "title": "Mr",
+    "first": "Roy",
+    "last": "Dean"
+  },
+  "location": {
+    "street": {
+      "number": 2308,
+      "name": "Crockett St"
+    },
+    "city": "Nowra",
+    "state": "Victoria",
+    "country": "Australia",
+    "postcode": 3087,
+    "coordinates": {
+      "latitude": "-89.2488",
+      "longitude": "-157.7208"
+    },
+    "timezone": {
+      "offset": "+7:00",
+      "description": "Bangkok, Hanoi, Jakarta"
+    }
+  },
+  "email": "roy.dean@example.com",
+  "login": {
+    "uuid": "d3d32ac7-65ce-4f0e-b7d2-c46e44f30e03",
+    "username": "ticklishdog821",
+    "password": "hola",
+    "salt": "AvY47c4T",
+    "md5": "09cb6c3d9a5a09ef29081fb24d2ed301",
+    "sha1": "0294ff8e2a40a9da1c48f132087b991e870da0cb",
+    "sha256": "97abd705ba6ef7186c80fdf88485d396eda1fa9a837d25662db9b1ad2e8b9c9f"
+  },
+  "dob": {
+    "date": "1958-06-01T21:04:15.968Z",
+    "age": 62
+  },
+  "registered": {
+    "date": "2009-03-30T18:15:12.817Z",
+    "age": 11
+  },
+  "phone": "02-3910-8023",
+  "cell": "0458-736-711",
+  "id": {
+    "name": "TFN",
+    "value": "709685752"
+  },
+  "picture": {
+    "large": "https://randomuser.me/api/portraits/men/91.jpg",
+    "medium": "https://randomuser.me/api/portraits/med/men/91.jpg",
+    "thumbnail": "https://randomuser.me/api/portraits/thumb/men/91.jpg"
+  },
+  "nat": "AU"
+}

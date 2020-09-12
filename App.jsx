@@ -1,19 +1,24 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
 import Header from "./components/header/Header";
-import Top from "./components/sections/top/Top";
+import Search from "./components/sections/top/Search";
+import Contacts from "./components/sections/center/Contacts";
+import { Store, store } from "./models/rootModel";
+import { StyleSheet, ScrollView } from "react-native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Header/>
-      <Top/>
-    </View>
+    <Store.Provider value={store}>
+      <ScrollView style={styles.container}>
+        <Header />
+        <Search />
+        <Contacts />
+      </ScrollView>
+    </Store.Provider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
 });

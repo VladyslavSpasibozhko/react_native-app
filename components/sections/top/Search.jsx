@@ -3,16 +3,16 @@ import { View } from "react-native";
 import SearchByName from "./searchByName/SearchByName";
 import SearchByGender from "./searchByGender/SearchByGender";
 import SearchByNationality from "./searchByNationality/SearchByNationality";
-import { styles } from "./top.style";
+import { styles } from "./search.style";
 
-const Top = () => {
+const Search = () => {
   return (
     <View style={styles.topSection}>
       <SearchByName />
       <SearchByGender />
-      <SearchByNationality />
+      {/*<SearchByNationality />*/}
     </View>
   );
 };
 
-export default Top;
+export default Search;
