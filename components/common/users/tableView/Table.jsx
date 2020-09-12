@@ -1,5 +1,6 @@
 import React from "react";
 import TableItem from "./tableItem/TableItem";
+import { observer } from "mobx-react-lite";
 
 const Table = ({ data }) => {
   return (
@@ -11,4 +12,4 @@ const Table = ({ data }) => {
   );
 };
 
-export default Table;
+export default observer(Table);

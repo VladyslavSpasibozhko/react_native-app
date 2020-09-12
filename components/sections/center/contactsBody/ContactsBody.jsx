@@ -1,20 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { observer } from "mobx-react-lite";
 import Table from "../../../common/users/tableView/Table";
 import List from "../../../common/users/listView/List";
 import { View } from "react-native";
-
-import user from "../../../../assets/user.json";
-
-const data = new Array(10).fill(user);
+import { useStore } from "../../../../models/rootModel";
 
 const ContactsBody = () => {
-  const view = "list";
+  const store = useStore();
+
+  useEffect(() => {
+    store.getUsers();
+  }, []);
 
   return (
     <View>
-      {view === "gallery" ? <Table data={data} /> : <List data={data} />}
+      {store.getView() === "gallery" ? (
+        <Table data={store.users} />
+      ) : (
+        <List data={store.users} />
+      )}
     </View>
   );
 };
 
-export default ContactsBody;
+export default observer(ContactsBody);

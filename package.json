@@ -10,7 +10,6 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
-    "@fortawesome/react-fontawesome": "^0.1.11",
     "@fortawesome/react-native-fontawesome": "^0.2.5",
     "@react-native-community/cli": "^4.13.0",
     "@react-native-community/picker": "^1.6.0",
@@ -29,7 +28,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
-    "babel-preset-expo": "~8.1.0"
+    "babel-preset-expo": "~8.1.0",
+    "redux-devtools-extension": "^2.13.8"
   },
   "private": true
 }

@@ -14,7 +14,7 @@ const LocationModel = types.model("Location", {
   city: types.string,
   state: types.string,
   country: types.string,
-  postcode: types.number,
+  postcode: types.union(types.string, types.number),
   coordinates: types.model("Coordinate", {
     latitude: types.string,
     longitude: types.string,
@@ -53,7 +53,7 @@ export const UserModel = types.model("UserModel", {
   cell: types.string,
   id: types.model("ID", {
     name: types.string,
-    value: types.string,
+    value: types.maybeNull(types.string),
   }),
   picture: types.model("Picture", {
     large: types.string,
