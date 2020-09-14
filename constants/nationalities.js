@@ -8,7 +8,7 @@ export const NATIONALITIES = [
   { iconCode: "ES", name: "Spanish", color: "green" },
   { iconCode: "FI", name: "Finnish", color: "cyan" },
   { iconCode: "FR", name: "French", color: "blue" },
-  { iconCode: "GB", name: "British", color: "geekblue" },
+  { iconCode: "GB", name: "British", color: "#109d73" },
   { iconCode: "IE", name: "Irish", color: "purple" },
   { iconCode: "IR", name: "Iranian", color: "#f50" },
   { iconCode: "NO", name: "Norwegian", color: "#2db7f5" },

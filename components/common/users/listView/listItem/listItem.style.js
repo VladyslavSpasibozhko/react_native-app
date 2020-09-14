@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: colors.secondary,
     marginVertical: 10,
-    paddingVertical: 10,
+    paddingVertical: 15,
   },
   avatar: {
     borderRadius: 50,
@@ -28,10 +28,13 @@ export const styles = StyleSheet.create({
     marginTop: 5,
   },
   userNat: {
-    padding: 5,
     borderRadius: 5,
+    padding: 5,
   },
   userNatText: {
     color: colors.white,
+  },
+  userName: {
+    color: colors.main,
   },
 });

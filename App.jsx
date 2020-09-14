@@ -1,24 +1,34 @@
+import "react-native-gesture-handler";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+
 import React from "react";
-import Header from "./components/header/Header";
-import Search from "./components/sections/top/Search";
-import Contacts from "./components/sections/center/Contacts";
 import { Store, appStore } from "./models/rootModel";
-import { StyleSheet, ScrollView } from "react-native";
+import Home from "./screens/Home";
+import Contacts from "./components/sections/center/Contacts";
+import ContactsPage from "./screens/contacts/Contacts";
+import colors from "./styles/colors";
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <Store.Provider value={appStore}>
-      <Header />
-      <ScrollView style={styles.container}>
-        <Search />
-        <Contacts />
-      </ScrollView>
-    </Store.Provider>
+    <NavigationContainer>
+      <Store.Provider value={appStore}>
+        <Tab.Navigator
+          initialRouteName="Contacts"
+          tabBarOptions={{
+            activeTintColor: colors.white,
+            inactiveTintColor: colors.secondaryDark,
+            labelPosition: "beside-icon",
+            activeBackgroundColor: colors.main,
+            inactiveBackgroundColor: colors.white,
+          }}
+        >
+          <Tab.Screen name={"Home"} component={Home} />
+          <Tab.Screen name={"Contacts"} component={ContactsPage} />
+        </Tab.Navigator>
+      </Store.Provider>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#fff",
-  },
-});

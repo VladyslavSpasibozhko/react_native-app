@@ -1,14 +1,18 @@
 import React from "react";
 import TableItem from "./tableItem/TableItem";
 import { observer } from "mobx-react-lite";
+import { useStore } from "../../../../models/rootModel";
+import { View } from "react-native";
 
-const Table = ({ data }) => {
+const Table = ({ navigation }) => {
+  const store = useStore();
+
   return (
-    <>
-      {data.map((user, key) => (
-        <TableItem key={key} user={user} />
+    <View>
+      {store.users.map((user, key) => (
+        <TableItem navigation={navigation} key={key} user={user} />
       ))}
-    </>
+    </View>
   );
 };
 

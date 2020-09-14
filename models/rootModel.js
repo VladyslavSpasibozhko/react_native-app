@@ -11,7 +11,7 @@ const RootModel = types
   .actions((self) => ({
     getUsers: flow(function* () {
       try {
-        const { data } = yield userApi.get("/?results=100");
+        const { data } = yield userApi.get("/?results=200");
         self.users = data.results;
       } catch (e) {
         console.log(e);

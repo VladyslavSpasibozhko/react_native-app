@@ -1,20 +1,21 @@
 import React from "react";
-import { observer } from "mobx-react-lite";
 import { View, Image, Text } from "react-native";
+import { observer } from "mobx-react-lite";
 import { getNationality, getUserName } from "../../../../../utils/utils";
 
-import { styles } from "./listItem.style";
 import { globalStyles } from "../../../../../styles/global";
+import { styles } from "./listItem.style";
 import colors from "../../../../../styles/colors";
 
-const ListItem = ({ user }) => {
+const ListItem = ({ user, navigation }) => {
   const {
     cardWrap,
     avatar,
     avatarImage,
     userInfo,
-    userNat,
+    userName,
     userNatText,
+    userNat,
     userPhone,
   } = styles;
 
@@ -31,7 +32,16 @@ const ListItem = ({ user }) => {
         />
       </View>
       <View style={userInfo}>
-        <Text style={globalStyles.font17}>{getUserName(user.name)}</Text>
+        <Text
+          style={[globalStyles.font17, userName]}
+          onPress={() =>
+            navigation.navigate("ContactCard", {
+              userId: user.login.uuid,
+            })
+          }
+        >
+          {getUserName(user.name)}
+        </Text>
         <Text style={userPhone}>{user.phone}</Text>
       </View>
       <View style={[userNat, { backgroundColor: color }]}>

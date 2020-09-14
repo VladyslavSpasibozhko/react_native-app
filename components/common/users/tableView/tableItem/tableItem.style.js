@@ -25,9 +25,12 @@ export const styles = StyleSheet.create({
   },
   userName: {
     fontSize: 18,
+    color: colors.main,
   },
   userNat: {
     color: colors.white,
+  },
+  userNatWrap: {
     padding: 5,
     borderRadius: 5,
   },
